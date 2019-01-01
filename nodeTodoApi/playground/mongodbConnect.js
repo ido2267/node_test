@@ -29,7 +29,10 @@ MongoClient.connect(url,(err,client)=>{
             return console.log('unable to connect to ionsert todo',err);
              }
           else
-          {console.log(JSON.stringify(result.ops,undefined,2)); }
+          {
+            //console.log(JSON.stringify(result.ops,undefined,2))
+           console.log(result.ops[0]._id.getTimestamp());
+            ; }
          
    });
    client.close();
