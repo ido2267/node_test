@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 
 
-var url = 'mongodb://localhost:27017/TodoApp';
+var url = 'mongodb://localhost:27017/Users';
 MongoClient.connect(url,(err,client)=>{
    if (err){
      return console.log('unable to connect to the server');
@@ -21,8 +21,8 @@ MongoClient.connect(url,(err,client)=>{
         //   {console.log(JSON.stringify(result.ops,undefined,2)); }
  
           db.collection('Users').insertOne({
-              name:"Ido Sokolovsky",
-              age:52,
+              name:"Ofir Sokolovsky",
+              age:17,
               location:"Shilat"}
               ,(err,result)=>{
           if (err){
